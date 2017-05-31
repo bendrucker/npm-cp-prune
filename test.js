@@ -7,9 +7,11 @@ var pify = require('pify')
 var path = require('path')
 
 var tmpDir = pify(tmp.dir)
+var fixture = path.resolve(__dirname, 'fixture')
 
 test('npm prune --production', function (t) {
-  return tmpDir()
+  return execa('npm', ['install'], {cwd: fixture})
+    .then(tmpDir)
     .then(function (destination) {
       return execa('node', [
         path.resolve(__dirname, 'cli.js'),
@@ -17,7 +19,7 @@ test('npm prune --production', function (t) {
         '--',
         '--production'
       ], {
-        cwd: path.resolve(__dirname, 'fixture')
+        cwd: fixture
       })
       .then(() => execa('npm', ['ls', 'xtend'], {cwd: destination}))
       .then(() => t.shouldFail(execa('npm', ['ls', 'ap'], {cwd: destination})))
