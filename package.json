@@ -1,0 +1,42 @@
+{
+  "name": "npm-cp-prune",
+  "bin": {
+    "npm-cp-prune": "./cli.js"
+  },
+  "version": "0.0.0",
+  "description": "Copy and prune node_modules to a new directory",
+  "license": "MIT",
+  "repository": "bendrucker/npm-cp-prune",
+  "author": {
+    "name": "Ben Drucker",
+    "email": "bvdrucker@gmail.com",
+    "url": "bendrucker.me"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "copy",
+    "cp",
+    "prune",
+    "node_modules"
+  ],
+  "devDependencies": {
+    "blue-tape": "~1.0.0",
+    "pify": "~3.0.0",
+    "standard": "^7.0.0",
+    "tape": "^4.0.0",
+    "tmp": "0.0.31"
+  },
+  "files": [
+    "*.js"
+  ],
+  "dependencies": {
+    "cpy": "~5.0.0",
+    "execa": "~0.6.3",
+    "meow": "~3.7.0",
+    "npm-package-files": "~1.0.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "xtend": "latest"
+  },
+  "devDependencies": {
+    "ap": "latest"
+  }
+}
