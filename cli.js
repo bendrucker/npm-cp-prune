@@ -26,10 +26,7 @@ var flags = separator >= 0
 
 Promise.all([
   copy(toGlob(packages), destination),
-  copy('node_modules/**/*', destination, {
-    parents: true,
-    nodir: true
-  })
+  execa('cp', ['-r', 'node_modules', destination])
 ])
 .then(() => execa('npm', ['prune'].concat(flags), {
   cwd: path.resolve(process.cwd(), destination),
