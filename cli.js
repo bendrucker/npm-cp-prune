@@ -24,8 +24,6 @@ var flags = separator >= 0
   ? process.argv.slice(separator + 1, process.argv.length)
   : []
 
-console.log(flags)
-
 Promise.all([
   copy(toGlob(packages), destination),
   copy('node_modules/**/*', destination, {
