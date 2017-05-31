@@ -3,7 +3,7 @@
   "bin": {
     "npm-cp-prune": "./cli.js"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Copy and prune node_modules to a new directory",
   "license": "MIT",
   "repository": "bendrucker/npm-cp-prune",
