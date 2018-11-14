@@ -10,7 +10,7 @@ var tmpDir = pify(tmp.dir)
 var fixture = path.resolve(__dirname, 'fixture')
 
 test('npm prune --production', function (t) {
-  return execa('npm', ['install'], {cwd: fixture})
+  return execa('npm', ['install'], { cwd: fixture })
     .then(tmpDir)
     .then(function (destination) {
       return execa('node', [
@@ -21,7 +21,7 @@ test('npm prune --production', function (t) {
       ], {
         cwd: fixture
       })
-      .then(() => execa('npm', ['ls', 'xtend'], {cwd: destination}))
-      .then(() => t.shouldFail(execa('npm', ['ls', 'ap'], {cwd: destination})))
+        .then(() => execa('npm', ['ls', 'xtend'], { cwd: destination }))
+        .then(() => t.shouldFail(execa('npm', ['ls', 'ap'], { cwd: destination })))
     })
 })

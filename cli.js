@@ -28,10 +28,10 @@ Promise.all([
   copy(toGlob(packages), destination),
   execa('cp', ['-r', 'node_modules', destination])
 ])
-.then(() => execa('npm', ['prune'].concat(flags), {
-  cwd: path.resolve(process.cwd(), destination),
-  stdio: 'inherit'
-}))
+  .then(() => execa('npm', ['prune'].concat(flags), {
+    cwd: path.resolve(process.cwd(), destination),
+    stdio: 'inherit'
+  }))
 
 function toGlob (filenames) {
   return '{' + Object.keys(filenames).join(',') + '}'
