@@ -1,4 +1,4 @@
-# npm-cp-prune [![Build Status](https://travis-ci.org/bendrucker/npm-cp-prune.svg?branch=master)](https://travis-ci.org/bendrucker/npm-cp-prune)
+# npm-cp-prune [![Build Status](https://travis-ci.org/bendrucker/npm-cp-prune.svg?branch=master)](https://travis-ci.org/bendrucker/npm-cp-prune) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/npm-cp-prune.svg)](https://greenkeeper.io/)
 
 > Copy and prune node_modules to a new directory
 
