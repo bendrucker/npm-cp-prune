@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "fixture/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
