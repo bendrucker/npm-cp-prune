@@ -34,7 +34,7 @@
     "*.js"
   ],
   "dependencies": {
-    "cpy": "~7.0.1",
+    "cpy": "~7.1.0",
     "execa": "~1.0.0",
     "meow": "~5.0.0",
     "npm-package-files": "~1.0.0"
